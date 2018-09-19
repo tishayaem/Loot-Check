@@ -18,4 +18,13 @@ describe("balanceReducer", () => {
       balanceReducer(initialState, { type: constants.DEPOSIT, deposit })
     ).toBe(15);
   });
+
+  it("withdraws infrom your balance", () => {
+    const withdraw = 10;
+    const initialState = 15;
+
+    expect(
+      balanceReducer(initialState, { type: constants.WITHDRAW, withdraw })
+    ).toBe(5);
+  });
 });
