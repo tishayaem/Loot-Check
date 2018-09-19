@@ -20,11 +20,11 @@ describe("balanceReducer", () => {
   });
 
   it("withdraws infrom your balance", () => {
-    const withdraw = 10;
+    const withdrawal = 10;
     const initialState = 15;
 
     expect(
-      balanceReducer(initialState, { type: constants.WITHDRAW, withdraw })
+      balanceReducer(initialState, { type: constants.WITHDRAW, withdrawal })
     ).toBe(5);
   });
 });
